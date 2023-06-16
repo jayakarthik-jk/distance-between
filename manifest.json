@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Distance Between",
+  "version": "0.0.1",
+  "description": "A simple extension to measure the distance between N points on a webpage.",
+  "icons": {
+    "48": "src/assets/images/icon64.png",
+    "128": "src/assets/images/icon512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/libraries/p5.js", "src/sketch.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_icon": "src/assets/images/icon64.png",
+    "default_title": "Distance Between"
+  }
+}
